@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparna M — Front-end Developer & Computer Science Fresher</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom smooth scroll and scroll reveal helper */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-purple-100 selection:text-purple-700">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="font-bold text-xl tracking-tight text-gray-900 flex items-center gap-2">
+                <span class="w-9 h-9 rounded-lg bg-primary-600 text-white flex items-center justify-center font-semibold text-sm shadow-md shadow-primary-500/20">AM</span>
+                <span>Aparna M</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#home" class="hover:text-primary-600 transition-colors">Home</a>
+                <a href="#about" class="hover:text-primary-600 transition-colors">About</a>
+                <a href="#skills" class="hover:text-primary-600 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-primary-600 transition-colors">Experience</a>
+                <a href="#education" class="hover:text-primary-600 transition-colors">Education</a>
+                <a href="#certifications" class="hover:text-primary-600 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-primary-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action button -->
+            <div class="hidden md:block">
+                <a href="mailto:aparnamanickam0713@gmail.com" class="px-4 py-2.5 rounded-lg bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium shadow-sm shadow-primary-500/20 transition-all">
+                    Let's Connect
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none p-2" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-4 shadow-lg">
+            <div class="flex flex-col gap-4 text-base font-medium text-gray-700">
+                <a href="#home" class="mobile-link hover:text-primary-600 py-1">Home</a>
+                <a href="#about" class="mobile-link hover:text-primary-600 py-1">About</a>
+                <a href="#skills" class="mobile-link hover:text-primary-600 py-1">Skills</a>
+                <a href="#experience" class="mobile-link hover:text-primary-600 py-1">Experience</a>
+                <a href="#education" class="mobile-link hover:text-primary-600 py-1">Education</a>
+                <a href="#certifications" class="mobile-link hover:text-primary-600 py-1">Certifications</a>
+                <a href="#contact" class="mobile-link hover:text-primary-600 py-1">Contact</a>
+                <div class="pt-2">
+                    <a href="mailto:aparnamanickam0713@gmail.com" class="block text-center w-full py-2.5 rounded-lg bg-primary-600 text-white text-sm font-medium shadow-sm">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="overflow-hidden">
+        
+        <!-- Hero Section -->
+        <section id="home" class="pt-32 pb-20 md:pt-44 md:pb-32 px-6">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 reveal">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-6 border border-primary-100">
+                        <span class="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
+                        FRONT-END DEVELOPER • FRESHER
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-[1.15] mb-6">
+                        Designing simple, <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600">user-friendly</span> digital experiences.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
+                        Hi, I'm <span class="font-semibold text-gray-900">Aparna M</span> from Coimbatore. As a Computer Science fresher with hands-on MERN stack internship experience, I craft clean, intuitive web interfaces with care.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium text-sm shadow-md shadow-primary-500/25 transition-all flex items-center gap-2">
+                            <span>Let's Connect</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#about" class="px-6 py-3.5 rounded-xl bg-white hover:bg-gray-100 text-gray-700 font-medium text-sm border border-gray-200 transition-all shadow-sm">
+                            Explore Portfolio
+                        </a>
+                    </div>
+
+                    <!-- Quick Contact Bar -->
+                    <div class="mt-12 pt-8 border-t border-gray-200/80 flex flex-wrap items-center gap-6 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-primary-600"></i>
+                            <span>Coimbatore, Tamil Nadu</span>
+                        </div>
+                        <a href="https://linkedin.com/in/aparna-manickam-b158903b6" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-primary-600 transition-colors">
+                            <i class="fa-brands fa-linkedin text-primary-600"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Card -->
+                <div class="md:col-span-5 reveal">
+                    <div class="relative">
+                        <!-- Decorative blur blob -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-3xl blur-xl opacity-20"></div>
+                        
+                        <div class="relative bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50 flex flex-col items-center text-center">
+                            <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white text-3xl font-bold flex items-center justify-center shadow-lg shadow-primary-500/30 mb-6">
+                                AM
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900 mb-1">Aparna M</h2>
+                            <p class="text-sm font-medium text-primary-600 mb-4">Front-end Developer & CS Student</p>
+                            <p class="text-xs text-gray-500 max-w-xs leading-relaxed mb-6">
+                                Passionate about building accessible, responsive, and clean web applications using modern front-end technologies.
+                            </p>
+                            <div class="w-full pt-4 border-t border-gray-100 flex justify-around text-xs text-gray-600 font-medium">
+                                <div>
+                                    <span class="block text-gray-900 font-bold text-base">B.Sc.</span>
+                                    Computer Science
+                                </div>
+                                <div class="w-px bg-gray-200"></div>
+                                <div>
+                                    <span class="block text-gray-900 font-bold text-base">MERN</span>
+                                    Internship
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-primary-600 font-semibold text-xs uppercase tracking-widest block mb-2">Get to know me</span>
+                    <h2 class="text-3xl font-bold text-gray-900">About Me</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center reveal">
+                    <div class="md:col-span-12 bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-primary-600 text-lg"></i>
+                            Career Objective
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Aspiring Computer Science fresher eager to secure an entry-level Front-end Developer position where I can apply my foundational skills in HTML, CSS, JavaScript, and React, combined with practical MERN stack internship experience. Eager to build user-centered, responsive, and engaging digital experiences while growing alongside a collaborative engineering team.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-200/60 text-sm text-gray-700">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-primary-600"></i>
+                                <span>User-Centered Design Focus</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-primary-600"></i>
+                                <span>Strong Team Collaboration</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-primary-600"></i>
+                                <span>Quick Learner & Adaptable</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-primary-600"></i>
+                                <span>Clean, Semantic Coding Habits</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-primary-600 font-semibold text-xs uppercase tracking-widest block mb-2">Expertise & Abilities</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Technical & Professional Skills</h2>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 reveal">
+                    <!-- Skill Card 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">HTML</h3>
+                            <p class="text-xs text-gray-500">Semantic & Modern</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">CSS</h3>
+                            <p class="text-xs text-gray-500">Responsive Layouts</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">React.js</h3>
+                            <p class="text-xs text-gray-500">Component-Based</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">MERN Stack</h3>
+                            <p class="text-xs text-gray-500">Full-stack exposure</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 5 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">Python</h3>
+                            <p class="text-xs text-gray-500">Basic Programming</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 6 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">SQL</h3>
+                            <p class="text-xs text-gray-500">Queries & Data</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 7 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">Leadership Skills</h3>
+                            <p class="text-xs text-gray-500">Initiative & Guidance</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 8 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">Team Collaboration</h3>
+                            <p class="text-xs text-gray-500">Effective Working</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 9 -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex items-center gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">Adaptability</h3>
+                            <p class="text-xs text-gray-500">Fast Tech Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-6 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-primary-600 font-semibold text-xs uppercase tracking-widest block mb-2">Professional Background</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Internship Experience</h2>
+                </div>
+
+                <div class="relative pl-6 sm:pl-8 border-l-2 border-primary-200 reveal">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-600 ring-4 ring-primary-50"></div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">MERN Stack Intern</h3>
+                                <p class="text-primary-600 font-medium">IDM Techpark</p>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-semibold self-start sm:self-auto border border-primary-100">
+                                Practical Internship
+                            </span>
+                        </div>
+                        
+                        <ul class="space-y-3 text-gray-600 text-sm leading-relaxed">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-primary-600 mt-1 flex-shrink-0"></i>
+                                <span>Learned to build full-stack web applications from scratch, gaining comprehensive understanding of client-server architecture and data flow.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-primary-600 mt-1 flex-shrink-0"></i>
+                                <span>Developed responsive and user-friendly interfaces using React.js, focusing on clean layout hierarchy and component reusability.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-primary-600 font-semibold text-xs uppercase tracking-widest block mb-2">Academic Journey</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Education</h2>
+                </div>
+
+                <div class="space-y-6 reveal">
+                    <!-- College Education -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <span class="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1 block">Undergraduate</span>
+                            <h3 class="text-xl font-bold text-gray-900">Bachelor of Computer Science</h3>
+                            <p class="text-gray-600 text-sm mt-1">Kovai Kalaimagal College of Arts and Science, Vellimalaipattinam, Coimbatore</p>
+                        </div>
+                        <div class="flex flex-col md:items-end gap-1 flex-shrink-0">
+                            <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-bold rounded-lg border border-primary-100">
+                                CGPA: 8.20 (up to 4th sem)
+                            </span>
+                            <span class="text-xs text-gray-500 font-medium mt-1">Currently Pursuing</span>
+                        </div>
+                    </div>
+
+                    <!-- School HSC -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <span class="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1 block">Higher Secondary (HSC) — 2024</span>
+                            <h3 class="text-xl font-bold text-gray-900">Isha Vidhya Matriculation Higher Secondary School</h3>
+                            <p class="text-gray-600 text-sm mt-1">Coimbatore</p>
+                        </div>
+                        <div class="flex flex-col md:items-end gap-1 flex-shrink-0">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-bold rounded-lg">
+                                68.8%
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- School SSLC -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div>
+                            <span class="text-xs font-semibold text-primary-600 uppercase tracking-wider mb-1 block">Secondary School (SSLC) — 2022</span>
+                            <h3 class="text-xl font-bold text-gray-900">Isha Vidhya Matriculation Higher Secondary School</h3>
+                            <p class="text-gray-600 text-sm mt-1">Coimbatore</p>
+                        </div>
+                        <div class="flex flex-col md:items-end gap-1 flex-shrink-0">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-bold rounded-lg">
+                                69.8%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 px-6 bg-white border-t border-gray-100">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-primary-600 font-semibold text-xs uppercase tracking-widest block mb-2">Continuous Learning</span>
+                    <h2 class="text-3xl font-bold text-gray-900">Certifications</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                    <!-- Cert 1 -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center font-bold mb-4">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Basics of Python</h3>
+                            <p class="text-xs font-medium text-primary-600 mb-3">Infosys</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200/60 text-xs text-gray-500">
+                            Verified Credential
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center font-bold mb-4">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">MongoDB for SQL Experts</h3>
+                            <p class="text-xs font-medium text-primary-600 mb-3">MongoDB</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200/60 text-xs text-gray-500">
+                            Verified Credential
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center font-bold mb-4">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Concepts in Python: Loops, Functions and Returns</h3>
+                            <p class="text-xs font-medium text-primary-600 mb-3">Coursera</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200/60 text-xs text-gray-500">
+                            Verified Credential
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center font-bold mb-4">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Artificial Intelligence Fundamentals</h3>
+                            <p class="text-xs font-medium text-primary-600 mb-3">IBM</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200/60 text-xs text-gray-500">
+                            Verified Credential
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all sm:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center font-bold mb-4">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-2">Lifelong Professional Skills</h3>
+                            <p class="text-xs font-medium text-primary-600 mb-3">IBM SkillsBuild</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200/60 text-xs text-gray-500">
+                            Verified Credential
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <span class="text-primary-600 font-semibold text-xs uppercase tracking-widest block mb-2">Get in touch</span>
+                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-6">Let's build something useful.</h2>
+                <p class="text-gray-600 max-w-lg mx-auto mb-10 leading-relaxed">
+                    I'm currently looking for fresher Front-end Developer opportunities. Whether you have a question or want to discuss a role, feel free to drop an email!
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:aparnamanickam0713@gmail.com" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-medium text-base shadow-lg shadow-primary-500/25 transition-all flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>aparnamanickam0713@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/aparna-manickam-b158903b6" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-gray-100 text-gray-800 font-medium text-base border border-gray-200 transition-all flex items-center justify-center gap-3 shadow-sm">
+                        <i class="fa-brands fa-linkedin text-primary-600"></i>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 text-sm text-gray-500 flex items-center justify-center gap-4">
+                    <span><i class="fa-solid fa-phone text-primary-600 mr-2"></i>9025387961</span>
+                    <span>•</span>
+                    <span><i class="fa-solid fa-location-dot text-primary-600 mr-2"></i>Coimbatore</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-8 px-6 text-center text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Aparna M. All rights reserved.</p>
+            <p class="flex items-center gap-1">
+                Designed & Built with <i class="fa-solid fa-heart text-red-500 text-xs mx-1"></i> for Front-end Opportunities
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Scroll Reveal -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Animation with Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
